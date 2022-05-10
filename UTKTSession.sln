@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.32413.511
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UTKTSession", "UTKTSession\UTKTSession.csproj", "{821BE0E8-9582-448E-9ECE-2B10DCD91E0E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LicenseService", "UTKTSession\LicenseService.csproj", "{821BE0E8-9582-448E-9ECE-2B10DCD91E0E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleRunner", "ConsoleRunner\ConsoleRunner.csproj", "{061BC0B6-03C6-436F-A895-EF5A012A995B}"
 EndProject
@@ -12,6 +12,8 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UnitTests", "UnitTests", "{A0DA15E3-B9F2-47C4-8B48-FA2F843DBBE2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KTxUnit", "KTxUnit\KTxUnit.csproj", "{DEDE9C3F-0275-4243-969C-E4BD40741B7E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestingExamples", "UnitTestingExamples\UnitTestingExamples.csproj", "{341438C7-3779-41AD-A28B-24B3BC4708EE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,6 +37,10 @@ Global
 		{DEDE9C3F-0275-4243-969C-E4BD40741B7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DEDE9C3F-0275-4243-969C-E4BD40741B7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DEDE9C3F-0275-4243-969C-E4BD40741B7E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{341438C7-3779-41AD-A28B-24B3BC4708EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{341438C7-3779-41AD-A28B-24B3BC4708EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{341438C7-3779-41AD-A28B-24B3BC4708EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{341438C7-3779-41AD-A28B-24B3BC4708EE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
