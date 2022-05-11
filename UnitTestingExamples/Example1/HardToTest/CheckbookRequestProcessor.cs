@@ -7,32 +7,29 @@ namespace UnitTestingExamples.Example1.HardToTest
 {
     public class CheckBookRequestProcessor
     {
-        public int Process(string userId, int numberOfChecks)
+        public void Process(string accountNumber, CheckbookType checkbookType, CheckbookSize checkbookSize)
         {
-            int lastPrintedCheckNumber = 0;
             try
             {
-                var userDatabase = new UserRepository();
-                var user = userDatabase.Get(userId);
-
+                // Get the last printed check number for customer account
                 var accountRepository = new AccountRepository();
-                lastPrintedCheckNumber = accountRepository.GetLastCheckNumber(user.AccountNumber);
+                var customerAccount = accountRepository.Get(accountNumber);
 
-                CheckbookPrinter.Print(user, lastPrintedCheckNumber, numberOfChecks);
+                // Get the checkbook size (# of checks in a checkbook)
+                var checkbookPackSize = ConfigurationManager.GetNumberOfChecksToPrint(checkbookSize);
 
-                var printDateTime = DateTime.Now;
-                CheckbookPrinter.Print(printDateTime);
+                // Print the checks
+                CheckbookPrinter.Print(customerAccount, checkbookType, checkbookPackSize);
 
-                lastPrintedCheckNumber = lastPrintedCheckNumber + numberOfChecks;
-                accountRepository.SetLastCheckNumber(user.AccountNumber, lastPrintedCheckNumber);
+                // Update user account with the last printed check number 
+                var lastPrintedCheckNumber = customerAccount.LastPrintedCheckNumber + checkbookPackSize;
+                accountRepository.SetLastCheckNumber(customerAccount.AccountNumber, lastPrintedCheckNumber);
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 Console.WriteLine(e.Message);
                 throw;
             }
-
-            return lastPrintedCheckNumber;
         }
     }
 }

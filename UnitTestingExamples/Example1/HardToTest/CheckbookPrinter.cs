@@ -7,12 +7,12 @@ namespace UnitTestingExamples.Example1.HardToTest
 {
     public static class CheckbookPrinter
     {
-        public static void Print(User user, int lastPrintedCheckNumber, int numberOfChecks)
+        public static void Print(CustomerAccount customer, CheckbookType checkbookType, int numberOfChecks)
         {
             throw new NotImplementedException();
         }
 
-        public static void Print(DateTime printDateTime)
+        public static void PrintPackageProductionStamp(DateTime printDateTime)
         {
             throw new NotImplementedException();
         }
