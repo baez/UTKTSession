@@ -22,8 +22,8 @@ namespace KTMSTest.Example1EasyTests
             Mock<IAccountRepository> accountRepositoryMock = CheckbookProcessorTestHelper.GetAccountRepositoryMock(testAccountNumber);
 
             var sut = new CheckBookRequestProcessor(
-                configurationManagerMock.Object,
                 accountRepositoryMock.Object,
+                configurationManagerMock.Object,
                 processorCheckbookPrinterAdapterMock.Object,
                 loggerMock.Object);
 
@@ -47,8 +47,8 @@ namespace KTMSTest.Example1EasyTests
             Mock<IAccountRepository> accountRepositoryMock = CheckbookProcessorTestHelper.GetAccountRepositoryMock(testAccountNumber);
 
             var sut = new CheckBookRequestProcessor(
-                configurationManagerMock.Object,
                 accountRepositoryMock.Object,
+                configurationManagerMock.Object,
                 processorCheckbookPrinterAdapterMock.Object,
                 loggerMock.Object);
 

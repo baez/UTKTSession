@@ -4,17 +4,12 @@ namespace CheckbookPrinting
 {
     public static class CheckbookPrinter
     {
-        public static CheckbookPrintResult Print(CustomerAccount customer, CheckbookType checkbookType, int numberOfChecks)
+        public static CheckbookPrintResult Print(CustomerAccount customerAccount, CheckbookType checkbookType, int numberOfChecks)
         {
             throw new NotImplementedException();
         }
 
         public static void PrintPackageProductionStamp(DateTime printDateTime)
-        {
-            throw new NotImplementedException();
-        }
-
-        public static CheckbookPrintResult Print(object customerAccount, CheckbookType checkbookType, object checkbookPackSize)
         {
             throw new NotImplementedException();
         }

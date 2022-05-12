@@ -8,14 +8,14 @@ namespace UnitTestingExamples.Example1.EasyToTest
 {
     public class CheckBookRequestProcessor
     {
-        private readonly IConfigurationManager configurationManager;
         private readonly IAccountRepository accountRepository;
+        private readonly IConfigurationManager configurationManager;
         private readonly IProcessorCheckbookPrinterAdaper processorCheckbookPrinterAdapter;
         private readonly ILogger logger;
 
         public CheckBookRequestProcessor(
-            IConfigurationManager configurationManager,
             IAccountRepository accountRepository,
+            IConfigurationManager configurationManager,
             IProcessorCheckbookPrinterAdaper processorCheckbookPrinterAdapter,
             ILogger logger)
 
