@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace CheckbookPrinting
+﻿namespace CheckbookPrinting
 {
     public class CheckbookPrintResult
     {

@@ -1,10 +1,8 @@
 ﻿using CheckbookPrinting;
 using System;
-using System.Collections.Generic;
-using System.Text;
 using UnitTestingExamples.Example1.Shared;
 
-namespace UnitTestingExamples.Example1.HardToTest
+namespace UnitTestingExamples.Example1.EasyToTest
 {
     public class CheckBookRequestProcessor
     {
@@ -23,18 +21,11 @@ namespace UnitTestingExamples.Example1.HardToTest
                 var customerAccount = AccountMapper.Map(account);
                 // Print the checks
                 var printResult = CheckbookPrinter.Print(customerAccount, checkbookType, checkbookPackSize);
-                if (printResult.Success)
-                {
-                    // Update user account with the last printed check number 
-                    var lastPrintedCheckNumber = customerAccount.LastPrintedCheckNumber + checkbookPackSize;
-                    accountRepository.SetLastCheckNumber(customerAccount.AccountNumber, Convert.ToInt32(printResult.LastPrintedCheckNumber));
-                }
-                else
-                {
-                    var msg = string.Format("CheckbookPrinter Error: {0}", printResult.ErrorCode);
-                    Console.WriteLine(msg);
-                    throw new Exception(msg);
-                }
+
+
+                // Update user account with the last printed check number 
+                var lastPrintedCheckNumber = customerAccount.LastPrintedCheckNumber + checkbookPackSize;
+                accountRepository.SetLastCheckNumber(customerAccount.AccountNumber, lastPrintedCheckNumber);
             }
             catch (Exception e)
             {

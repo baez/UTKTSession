@@ -5,10 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Example1\EasyToTest\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\CheckbookPrinting\CheckbookPrinting.csproj" />
   </ItemGroup>
 

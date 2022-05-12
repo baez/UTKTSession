@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using UnitTestingExamples.Example1.Shared;
 
-namespace UnitTestingExamples.Example1.HardToTest
+namespace UnitTestingExamples.Example1.Shared
 {
     public static class ConfigurationManager
     {
