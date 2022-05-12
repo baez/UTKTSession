@@ -13,5 +13,20 @@ namespace CheckbookPrinting
         {
             throw new NotImplementedException();
         }
+
+        public static CheckbookPrintResult Print(object customerAccount, CheckbookType checkbookType, object checkbookPackSize)
+        {
+            throw new NotImplementedException();
+        }
+
+        public static void UpdateCheckbookPageSize(decimal pageWidth, decimal pageLength)
+        {
+            throw new NotImplementedException();
+        }
+
+        public static void UpdateCheckSize(decimal checkWidth, decimal checkLength)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

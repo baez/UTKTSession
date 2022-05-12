@@ -18,8 +18,4 @@
     <ProjectReference Include="..\UnitTestingExamples\UnitTestingExamples.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Example1EasyTests\" />
-  </ItemGroup>
-
 </Project>

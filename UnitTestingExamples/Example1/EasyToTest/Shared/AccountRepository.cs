@@ -1,9 +1,10 @@
 ﻿using System;
 using UnitTestingExamples.Example1.EasyToTest.Interfaces;
+using UnitTestingExamples.Example1.Shared;
 
-namespace UnitTestingExamples.Example1.Shared
+namespace UnitTestingExamples.Example1.EasyToTest.Shared
 {
-    public class AccountRepository
+    public class AccountRepository : IAccountRepository
     {
         public Account Get(string accountId)
         {

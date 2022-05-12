@@ -1,10 +1,11 @@
 ﻿using System;
+using UnitTestingExamples.Example1.EasyToTest.Interfaces;
 using UnitTestingExamples.Example1.Shared;
 using ConfigManager = UnitTestingExamples.Example1.Shared;
 
 namespace UnitTestingExamples.Example1.EasyToTest
 {
-    public class ConfigurationManager
+    public class ConfigurationManager : IConfigurationManager
     {
         public int NumberOfChecksSmallPack { get; set; }
         public int NumberOfChecksMediumPack { get; set; }
