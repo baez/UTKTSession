@@ -13,6 +13,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UnitTests", "UnitTests", "{
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestingExamples", "UnitTestingExamples\UnitTestingExamples.csproj", "{341438C7-3779-41AD-A28B-24B3BC4708EE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CheckbookPrinting", "CheckbookPrinting\CheckbookPrinting.csproj", "{D7F8571A-A348-4544-A6B3-EEFE2A692505}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +37,10 @@ Global
 		{341438C7-3779-41AD-A28B-24B3BC4708EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{341438C7-3779-41AD-A28B-24B3BC4708EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{341438C7-3779-41AD-A28B-24B3BC4708EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7F8571A-A348-4544-A6B3-EEFE2A692505}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7F8571A-A348-4544-A6B3-EEFE2A692505}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7F8571A-A348-4544-A6B3-EEFE2A692505}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7F8571A-A348-4544-A6B3-EEFE2A692505}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

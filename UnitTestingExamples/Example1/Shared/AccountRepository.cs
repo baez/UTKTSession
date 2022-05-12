@@ -6,7 +6,7 @@ namespace UnitTestingExamples.Example1.Shared
 {
     public class AccountRepository
     {
-        public CustomerAccount Get(string accountId)
+        public Account Get(string accountId)
         {
             throw new NotImplementedException();
         }

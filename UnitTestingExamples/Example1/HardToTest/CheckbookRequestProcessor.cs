@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CheckbookPrinting;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using UnitTestingExamples.Example1.Shared;
@@ -13,13 +14,16 @@ namespace UnitTestingExamples.Example1.HardToTest
             {
                 // Get the last printed check number for customer account
                 var accountRepository = new AccountRepository();
-                var customerAccount = accountRepository.Get(accountNumber);
+                var account = accountRepository.Get(accountNumber);
 
                 // Get the checkbook size (# of checks in a checkbook)
                 var checkbookPackSize = ConfigurationManager.GetNumberOfChecksToPrint(checkbookSize);
 
+                // Map to PrintLibrary CustomerAccount
+                var customerAccount = AccountMapper.Map(account);
                 // Print the checks
-                CheckbookPrinter.Print(customerAccount, checkbookType, checkbookPackSize);
+                var printResult = CheckbookPrinter.Print(customerAccount, checkbookType, checkbookPackSize);
+
 
                 // Update user account with the last printed check number 
                 var lastPrintedCheckNumber = customerAccount.LastPrintedCheckNumber + checkbookPackSize;

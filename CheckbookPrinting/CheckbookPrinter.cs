@@ -1,13 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using UnitTestingExamples.Example1.Shared;
 
-namespace UnitTestingExamples.Example1.HardToTest
+namespace CheckbookPrinting
 {
     public static class CheckbookPrinter
     {
-        public static void Print(CustomerAccount customer, CheckbookType checkbookType, int numberOfChecks)
+        public static CheckbookPrintResult Print(CustomerAccount customer, CheckbookType checkbookType, int numberOfChecks)
         {
             throw new NotImplementedException();
         }
