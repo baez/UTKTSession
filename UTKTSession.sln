@@ -15,7 +15,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitTestingExamples", "Unit
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CheckbookPrinting", "CheckbookPrinting\CheckbookPrinting.csproj", "{D7F8571A-A348-4544-A6B3-EEFE2A692505}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Unrelated", "Unrelated", "{57EEECE2-82B1-411D-9CD9-A03B826ADAC7}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_Unrelated", "_Unrelated", "{57EEECE2-82B1-411D-9CD9-A03B826ADAC7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
