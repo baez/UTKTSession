@@ -3,17 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.32413.511
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LicenseService", "UTKTSession\LicenseService.csproj", "{821BE0E8-9582-448E-9ECE-2B10DCD91E0E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LicenseService", "UTKTSession\LicenseService.csproj", "{821BE0E8-9582-448E-9ECE-2B10DCD91E0E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleRunner", "ConsoleRunner\ConsoleRunner.csproj", "{061BC0B6-03C6-436F-A895-EF5A012A995B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleRunner", "ConsoleRunner\ConsoleRunner.csproj", "{061BC0B6-03C6-436F-A895-EF5A012A995B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KTMSTest", "KTMSTest\KTMSTest.csproj", "{19C43A9F-24BE-47E4-93A2-E2F860E54489}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KTMSTest", "KTMSTest\KTMSTest.csproj", "{19C43A9F-24BE-47E4-93A2-E2F860E54489}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UnitTests", "UnitTests", "{A0DA15E3-B9F2-47C4-8B48-FA2F843DBBE2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestingExamples", "UnitTestingExamples\UnitTestingExamples.csproj", "{341438C7-3779-41AD-A28B-24B3BC4708EE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitTestingExamples", "UnitTestingExamples\UnitTestingExamples.csproj", "{341438C7-3779-41AD-A28B-24B3BC4708EE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CheckbookPrinting", "CheckbookPrinting\CheckbookPrinting.csproj", "{D7F8571A-A348-4544-A6B3-EEFE2A692505}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CheckbookPrinting", "CheckbookPrinting\CheckbookPrinting.csproj", "{D7F8571A-A348-4544-A6B3-EEFE2A692505}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Unrelated", "Unrelated", "{57EEECE2-82B1-411D-9CD9-A03B826ADAC7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -46,6 +48,8 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
+		{821BE0E8-9582-448E-9ECE-2B10DCD91E0E} = {57EEECE2-82B1-411D-9CD9-A03B826ADAC7}
+		{061BC0B6-03C6-436F-A895-EF5A012A995B} = {57EEECE2-82B1-411D-9CD9-A03B826ADAC7}
 		{19C43A9F-24BE-47E4-93A2-E2F860E54489} = {A0DA15E3-B9F2-47C4-8B48-FA2F843DBBE2}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
