@@ -8,7 +8,7 @@ namespace UnitTestingExamples.Example1.HardToTest
 {
     public class CheckBookRequestProcessor
     {
-        public void Process(string accountNumber, CheckbookType checkbookType, CheckbookSize checkbookSize)
+        public bool Process(string accountNumber, CheckbookType checkbookType, CheckbookSize checkbookSize)
         {
             try
             {
@@ -39,8 +39,10 @@ namespace UnitTestingExamples.Example1.HardToTest
             catch (Exception e)
             {
                 Console.WriteLine(e.Message);
-                throw;
+                return false;
             }
+
+            return true;
         }
     }
 }

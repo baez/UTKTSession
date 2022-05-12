@@ -1,6 +1,7 @@
 ﻿using CheckbookPrinting;
 using System;
 using UnitTestingExamples.Example1.EasyToTest.Interfaces;
+using UnitTestingExamples.Example1.EasyToTest.Shared;
 using UnitTestingExamples.Example1.Shared;
 
 namespace UnitTestingExamples.Example1.EasyToTest
@@ -9,17 +10,23 @@ namespace UnitTestingExamples.Example1.EasyToTest
     {
         private readonly IConfigurationManager configurationManager;
         private readonly IAccountRepository accountRepository;
+        private readonly IProcessorCheckbookPrinterAdaper processorCheckbookPrinterAdapter;
+        private readonly ILogger logger;
 
         public CheckBookRequestProcessor(
             IConfigurationManager configurationManager,
-            IAccountRepository accountRepository)
+            IAccountRepository accountRepository,
+            IProcessorCheckbookPrinterAdaper processorCheckbookPrinterAdapter,
+            ILogger logger)
 
         {
             this.configurationManager = configurationManager;
             this.accountRepository = accountRepository;
+            this.processorCheckbookPrinterAdapter = processorCheckbookPrinterAdapter;
+            this.logger = logger;
         }
 
-        public void Process(string accountNumber, CheckbookType checkbookType, CheckbookSize checkbookSize)
+        public bool Process(string accountNumber, CheckbookType checkbookType, CheckbookSize checkbookSize)
         {
             try
             {
@@ -31,8 +38,9 @@ namespace UnitTestingExamples.Example1.EasyToTest
 
                 // Map to PrintLibrary CustomerAccount
                 var customerAccount = AccountMapper.Map(account);
+
                 // Print the checks
-                var printResult = CheckbookPrinter.Print(customerAccount, checkbookType, checkbookPackSize);
+                var printResult = this.processorCheckbookPrinterAdapter.Print(customerAccount, checkbookType, checkbookPackSize);
                 if (printResult.Success)
                 {
                     // Update user account with the last printed check number 
@@ -41,16 +49,18 @@ namespace UnitTestingExamples.Example1.EasyToTest
                 }
                 else
                 {
-                    var msg = string.Format("CheckbookPrinter Error: {0}", printResult.ErrorCode);
-                    Console.WriteLine(msg);
-                    throw new Exception(msg);
+                    var errorMessage = ErrorMessage.Get(printResult.ErrorCode);
+                    this.logger.Log(errorMessage);
+                    throw new Exception(errorMessage);
                 }
             }
             catch (Exception e)
             {
-                Console.WriteLine(e.Message);
-                throw;
+                this.logger.Log(e.Message);
+                return false;
             }
+
+            return true;
         }
     }
 }
