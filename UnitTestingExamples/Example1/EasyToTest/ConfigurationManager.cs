@@ -7,24 +7,48 @@ namespace UnitTestingExamples.Example1.EasyToTest
 {
     public class ConfigurationManager : IConfigurationManager
     {
-        public int NumberOfChecksSmallPack { get; set; }
-        public int NumberOfChecksMediumPack { get; set; }
-        public int NumberOfChecksLargePack { get; set; }
+        public int NumberOfChecksSmallPack
+        {
+            get
+            {
+                return ConfigManager.ConfigurationManager.NumberOfChecksSmallPack;
+            }
 
+            set
+            {
+                ConfigManager.ConfigurationManager.NumberOfChecksSmallPack = value;
+            }
+        }
+
+        public int NumberOfChecksMediumPack
+        {
+            get
+            {
+                return ConfigManager.ConfigurationManager.NumberOfChecksMediumPack;
+            }
+
+            set
+            {
+                ConfigManager.ConfigurationManager.NumberOfChecksMediumPack = value;
+            }
+        }
+
+        public int NumberOfChecksLargePack
+        {
+            get
+            {
+                return ConfigManager.ConfigurationManager.NumberOfChecksLargePack;
+            }
+
+            set
+            {
+                ConfigManager.ConfigurationManager.NumberOfChecksLargePack = value;
+            }
+        }
 
         public int GetNumberOfChecksToPrint(CheckbookSize checkbookSize)
         {
-            switch (checkbookSize)
-            {
-                case CheckbookSize.Small:
-                    return ConfigManager.ConfigurationManager.NumberOfChecksSmallPack;
-                case CheckbookSize.Medium:
-                    return ConfigManager.ConfigurationManager.NumberOfChecksMediumPack;
-                case CheckbookSize.Large:
-                    return ConfigManager.ConfigurationManager.NumberOfChecksLargePack;
-                default:
-                    throw new ArgumentException(nameof(checkbookSize));
-            }
+            return ConfigManager.ConfigurationManager.GetNumberOfChecksToPrint(checkbookSize);
         }
     }
 }
