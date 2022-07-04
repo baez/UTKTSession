@@ -8,7 +8,6 @@ namespace UnitTestingExamples.Example1.Shared
         public static int NumberOfRowsPerPage { get; set; }
         public static decimal checkLength { get; set; }
         public static decimal checkWidth { get; set; }
-
         public static int NumberOfChecksSmallPack { get; set; }
         public static int NumberOfChecksMediumPack { get; set; }
         public static int NumberOfChecksLargePack { get; set; }
