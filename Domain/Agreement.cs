@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace LicenseService.Legacy.DataModels
+namespace LicenseService.Legacy.Domain
 {
-    public class AgreementDataModel
+    public class Agreement
     {
         public string AgreementID { get; set; } 
 

@@ -5,10 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Current\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\ApplicationInterfaces\ApplicationInterfaces.csproj" />
     <ProjectReference Include="..\Domain\Domain.csproj" />
   </ItemGroup>

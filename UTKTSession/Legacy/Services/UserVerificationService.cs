@@ -1,7 +1,5 @@
-﻿using LicenseService.Legacy.DataModels;
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System;
+using LicenseService.Legacy.Domain;
 
 namespace LicenseService.Legacy.Services
 {

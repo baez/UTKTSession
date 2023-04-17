@@ -1,7 +1,7 @@
-﻿using LicenseService.Legacy.Common;
-using LicenseService.Legacy.DataModels;
+﻿using System;
+using LicenseService.Legacy.Common;
+using LicenseService.Legacy.Domain;
 using LicenseService.Legacy.Services;
-using System;
 
 namespace LicenseService.Legacy.Controllers
 {

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace LicenseService.Legacy.DataModels
 {
-    public class User
+    public class UserDataModel
     {
     }
 }

@@ -5,4 +5,11 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\ApplicationInterfaces\ApplicationInterfaces.csproj" />
+    <ProjectReference Include="..\Domain\Domain.csproj" />
+    <ProjectReference Include="..\LicenseClient\LicenseClientApp.csproj" />
+    <ProjectReference Include="..\UTKTSession\LicenseService.csproj" />
+  </ItemGroup>
+
 </Project>

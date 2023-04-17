@@ -1,11 +1,9 @@
-﻿using LicenseService.Legacy.DataModels;
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using ApplicationInterfaces;
+using LicenseService.Legacy.Domain;
 
 namespace LicenseService.Legacy.Services
 {
-    public class AgreementService
+    public class AgreementService : IAgreementService
     {
         public void ReserveLicense(User user)
         {

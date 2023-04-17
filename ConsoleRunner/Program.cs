@@ -1,4 +1,7 @@
 ﻿using System;
+using ApplicationInterfaces;
+using LicenseClient;
+using LicenseService.Legacy.Services;
 
 namespace ConsoleRunner
 {
@@ -6,7 +9,9 @@ namespace ConsoleRunner
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            IAgreementService agreementService = new AgreementService();
+
+            var clientApp = new ClientApp(agreementService);
         }
     }
 }
