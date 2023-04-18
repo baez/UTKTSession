@@ -10,13 +10,13 @@ namespace UnitTestingExamples.Example1.EasyToTest
     {
         private readonly IAccountRepository accountRepository;
         private readonly IConfigurationManager configurationManager;
-        private readonly IProcessorCheckbookPrinterAdaper processorCheckbookPrinterAdapter;
+        private readonly ICheckbookProcessorPrinterAdaper processorCheckbookPrinterAdapter;
         private readonly ILogger logger;
 
         public CheckBookRequestProcessor(
             IAccountRepository accountRepository,
             IConfigurationManager configurationManager,
-            IProcessorCheckbookPrinterAdaper processorCheckbookPrinterAdapter,
+            ICheckbookProcessorPrinterAdaper processorCheckbookPrinterAdapter,
             ILogger logger)
 
         {

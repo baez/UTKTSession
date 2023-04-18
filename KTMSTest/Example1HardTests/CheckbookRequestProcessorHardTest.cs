@@ -15,7 +15,7 @@ namespace KTMSTest.Example1HardTests
         [TestMethod]
         public void ProcessesPrintCheckbookRequest()
         {
-            var checkbookRequestProcessor = new CheckBookRequestProcessor();
+            var checkbookRequestProcessor = new CheckBookPrintProcessor();
             checkbookRequestProcessor.Process("123", CheckbookType.Standard, CheckbookSize.Small);
 
             // Assert by checking the database or the mock database

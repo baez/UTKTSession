@@ -1,12 +1,10 @@
-﻿using CheckbookPrinting;
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System;
+using CheckbookPrinting;
 using UnitTestingExamples.Example1.Shared;
 
 namespace UnitTestingExamples.Example1.HardToTest
 {
-    public class CheckBookRequestProcessor
+    public class CheckBookPrintProcessor
     {
 
         public bool Process(string accountNumber, CheckbookType checkbookType, CheckbookSize checkbookSize)

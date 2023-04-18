@@ -22,9 +22,9 @@ namespace KTMSTest.Example1EasyTests
             return accountRepositoryMock;
         }
 
-        public static Mock<IProcessorCheckbookPrinterAdaper> GetProcessorCheckbookPrinterAdaperMock(bool success = true, int errorCode = 0, int lastPrintedCheckNumber = 10)
+        public static Mock<ICheckbookProcessorPrinterAdaper> GetProcessorCheckbookPrinterAdaperMock(bool success = true, int errorCode = 0, int lastPrintedCheckNumber = 10)
         {
-            var processorCheckbookPrinterAdapterMock = new Mock<IProcessorCheckbookPrinterAdaper>();
+            var processorCheckbookPrinterAdapterMock = new Mock<ICheckbookProcessorPrinterAdaper>();
             processorCheckbookPrinterAdapterMock.Setup(p => p.Print(It.IsAny<CustomerAccount>(), It.IsAny<CheckbookType>(), It.IsAny<int>()))
                 .Returns(new CheckbookPrintResult()
                 {
