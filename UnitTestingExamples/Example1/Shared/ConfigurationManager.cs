@@ -12,7 +12,6 @@ namespace UnitTestingExamples.Example1.Shared
         public static int NumberOfChecksMediumPack { get; set; }
         public static int NumberOfChecksLargePack { get; set; }
 
-
         public static int GetNumberOfChecksToPrint(CheckbookSize checkbookSize)
         {
             switch (checkbookSize)

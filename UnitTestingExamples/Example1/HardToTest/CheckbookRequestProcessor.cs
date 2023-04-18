@@ -8,6 +8,7 @@ namespace UnitTestingExamples.Example1.HardToTest
 {
     public class CheckBookRequestProcessor
     {
+
         public bool Process(string accountNumber, CheckbookType checkbookType, CheckbookSize checkbookSize)
         {
             try
@@ -25,7 +26,7 @@ namespace UnitTestingExamples.Example1.HardToTest
                 var printResult = CheckbookPrinter.Print(customerAccount, checkbookType, checkbookPackSize);
                 if (printResult.Success)
                 {
-                    // Update user account with the last printed check number 
+                    // Update user account with the last printed check number
                     var lastPrintedCheckNumber = customerAccount.LastPrintedCheckNumber + checkbookPackSize;
                     accountRepository.SetLastCheckNumber(customerAccount.AccountNumber, Convert.ToInt32(printResult.LastPrintedCheckNumber));
                 }
