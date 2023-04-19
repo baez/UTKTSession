@@ -12,7 +12,7 @@ namespace KTMSTest.Example1HardTests
         public void ProcessesPrintCheckbookRequest()
         {
             var checkbookRequestProcessor = new CheckBookPrintProcessor();
-            checkbookRequestProcessor.Process("123", CheckbookType.Standard, CheckbookSize.Small);
+            checkbookRequestProcessor.Process("001746", CheckbookType.Standard, CheckbookSize.Small);
 
             // Asserting the test is successful only possible by checking the database
             // or checking the printer

@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using UnitTestingExamples.Example1.Shared.DataModels;
 
 namespace UnitTestingExamples.Example1.Shared
 {
