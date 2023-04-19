@@ -3,12 +3,11 @@
     using CheckbookPrinting;
     using ExampleApplications.Example1.Shared.DataModels;
     using KTExampleApplication.Example1.EasyToTest;
-    using KTExampleApplication.Example1.EasyToTest.Shared;
     using Microsoft.VisualStudio.TestTools.UnitTesting;
     using UnitTestingExamples.Example1.Shared;
 
     [TestClass]
-    public class InvoiceCalcul_torTest
+    public class InvoiceCalculatorTest
     {
         [TestMethod]
         public void CalculateInvoice_WhenAccountTypeIsBusinessEliteForEliteCheckbook_ShouldReturnZero()
