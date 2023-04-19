@@ -6,19 +6,18 @@ using UnitTestingExamples.Example1.Shared;
 
 namespace UnitTestingExamples.Example1.EasyToTest
 {
-    public class CheckBookRequestProcessor
+    public class CheckBookPrintProcessor
     {
         private readonly IAccountRepository accountRepository;
         private readonly IConfigurationManager configurationManager;
         private readonly ICheckbookProcessorPrinterAdaper processorCheckbookPrinterAdapter;
         private readonly ILogger logger;
 
-        public CheckBookRequestProcessor(
+        public CheckBookPrintProcessor(
             IAccountRepository accountRepository,
             IConfigurationManager configurationManager,
             ICheckbookProcessorPrinterAdaper processorCheckbookPrinterAdapter,
             ILogger logger)
-
         {
             this.configurationManager = configurationManager;
             this.accountRepository = accountRepository;

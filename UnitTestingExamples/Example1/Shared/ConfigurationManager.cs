@@ -4,24 +4,42 @@ namespace UnitTestingExamples.Example1.Shared
 {
     public static class ConfigurationManager
     {
-        public static int NumberOfChecksPerRow { get; set; }
-        public static int NumberOfRowsPerPage { get; set; }
-        public static decimal checkLength { get; set; }
-        public static decimal checkWidth { get; set; }
-        public static int NumberOfChecksSmallPack { get; set; }
-        public static int NumberOfChecksMediumPack { get; set; }
-        public static int NumberOfChecksLargePack { get; set; }
+        private static readonly int numberOfChecksSmallPack;
 
-        public static int GetNumberOfChecksToPrint(CheckbookSize checkbookSize)
+        private static readonly int numberOfChecksMediumPack;
+
+        private static readonly int numberOfChecksLargePack;
+
+        public static int NumberOfChecksPerRow { get; }
+
+        public static int NumberOfRowsPerPage { get; }
+
+        public static decimal CheckLength { get; }
+
+        public static decimal CheckWidth { get; }
+
+        static ConfigurationManager()
+        {
+            NumberOfChecksPerRow = 2;
+            NumberOfRowsPerPage = 4;
+            CheckLength = 6.1m;
+            CheckWidth = 2.5m;
+            numberOfChecksSmallPack = 20;
+            numberOfChecksMediumPack = 50;
+            numberOfChecksLargePack = 100;
+        }
+
+
+    public static int NumberOfChecks(CheckbookSize checkbookSize)
         {
             switch (checkbookSize)
             {
                 case CheckbookSize.Small:
-                    return ConfigurationManager.NumberOfChecksSmallPack;
+                    return numberOfChecksSmallPack;
                 case CheckbookSize.Medium:
-                    return ConfigurationManager.NumberOfChecksMediumPack;
+                    return numberOfChecksMediumPack;
                 case CheckbookSize.Large:
-                    return ConfigurationManager.NumberOfChecksLargePack;
+                    return numberOfChecksLargePack;
                 default:
                     throw new ArgumentException(nameof(checkbookSize));
             }

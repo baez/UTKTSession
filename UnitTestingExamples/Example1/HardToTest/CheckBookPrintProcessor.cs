@@ -7,7 +7,7 @@ namespace UnitTestingExamples.Example1.HardToTest
     public class CheckBookPrintProcessor
     {
 
-        public bool Process(string accountNumber, CheckbookType checkbookType, CheckbookSize checkbookSize)
+        public void Process(string accountNumber, CheckbookType checkbookType, CheckbookSize checkbookSize)
         {
             try
             {
@@ -16,10 +16,11 @@ namespace UnitTestingExamples.Example1.HardToTest
                 var account = accountRepository.Get(accountNumber);
 
                 // Get the checkbook size (# of checks in a checkbook)
-                var checkbookPackSize = ConfigurationManager.GetNumberOfChecksToPrint(checkbookSize);
+                var checkbookPackSize = ConfigurationManager.NumberOfChecks(checkbookSize);
 
                 // Map to PrintLibrary CustomerAccount
                 var customerAccount = AccountMapper.Map(account);
+
                 // Print the checks
                 var printResult = CheckbookPrinter.Print(customerAccount, checkbookType, checkbookPackSize);
                 if (printResult.Success)
@@ -37,11 +38,9 @@ namespace UnitTestingExamples.Example1.HardToTest
             }
             catch (Exception e)
             {
-                Console.WriteLine(e.Message);
-                return false;
+                Logger.Log(e.Message);
+                throw;
             }
-
-            return true;
         }
     }
 }

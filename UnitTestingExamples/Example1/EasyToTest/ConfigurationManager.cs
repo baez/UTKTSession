@@ -1,5 +1,4 @@
-﻿using System;
-using UnitTestingExamples.Example1.EasyToTest.Interfaces;
+﻿using UnitTestingExamples.Example1.EasyToTest.Interfaces;
 using UnitTestingExamples.Example1.Shared;
 using ConfigManager = UnitTestingExamples.Example1.Shared;
 
@@ -7,48 +6,41 @@ namespace UnitTestingExamples.Example1.EasyToTest
 {
     public class ConfigurationManager : IConfigurationManager
     {
-        public int NumberOfChecksSmallPack
+        public int NumberOfChecksPerRow
         {
             get
             {
-                return ConfigManager.ConfigurationManager.NumberOfChecksSmallPack;
-            }
-
-            set
-            {
-                ConfigManager.ConfigurationManager.NumberOfChecksSmallPack = value;
+                return ConfigManager.ConfigurationManager.NumberOfChecksPerRow;
             }
         }
 
-        public int NumberOfChecksMediumPack
+        public int NumberOfRowsPerPage
         {
             get
             {
-                return ConfigManager.ConfigurationManager.NumberOfChecksMediumPack;
-            }
-
-            set
-            {
-                ConfigManager.ConfigurationManager.NumberOfChecksMediumPack = value;
+                return ConfigManager.ConfigurationManager.NumberOfRowsPerPage; ;
             }
         }
 
-        public int NumberOfChecksLargePack
+        public decimal CheckLength
         {
             get
             {
-                return ConfigManager.ConfigurationManager.NumberOfChecksLargePack;
+                return ConfigManager.ConfigurationManager.CheckLength;
             }
+        }
 
-            set
+        public decimal CheckWidth
+        {
+            get
             {
-                ConfigManager.ConfigurationManager.NumberOfChecksLargePack = value;
+                return ConfigManager.ConfigurationManager.CheckWidth;
             }
         }
 
         public int GetNumberOfChecksToPrint(CheckbookSize checkbookSize)
         {
-            return ConfigManager.ConfigurationManager.GetNumberOfChecksToPrint(checkbookSize);
+            return ConfigManager.ConfigurationManager.NumberOfChecks(checkbookSize);
         }
     }
 }
