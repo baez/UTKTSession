@@ -7,13 +7,13 @@ namespace UnitTestingExamples.Example1.HardToTest
 {
     public class CheckBookPrintProcessor
     {
-        public void Process(string accountNumber, CheckbookType checkbookType, CheckbookSize checkbookSize)
+        public void Process(string accountId, CheckbookType checkbookType, CheckbookSize checkbookSize)
         {
             try
             {
                 // Get the last printed check number for customer account
                 var accountRepository = new AccountRepository();
-                var account = accountRepository.Get(accountNumber);
+                var account = accountRepository.Get(accountId);
 
                 // Get the checkbook size (# of checks in a checkbook)
                 var checkbookPackSize = ConfigurationManager.NumberOfChecks(checkbookSize);
@@ -22,12 +22,12 @@ namespace UnitTestingExamples.Example1.HardToTest
                 var customerAccount = AccountMapper.Map(account);
 
                 // Print the checks
-                var printResult = CheckbookPrinter.Print(customerAccount, checkbookType, checkbookPackSize);
+                var printResult = CheckbookPrinter.Print(customerAccount, checkbookType, checkbookPackSize, account.LastPrintedCheckNumber);
                 if (printResult.Success)
                 {
                     // Update user account with the last printed check number
                     var lastPrintedCheckNumber = customerAccount.LastPrintedCheckNumber + checkbookPackSize;
-                    accountRepository.SetLastCheckNumber(customerAccount.AccountNumber, Convert.ToInt32(printResult.LastPrintedCheckNumber));
+                    accountRepository.SetLastCheckNumber(customerAccount.AccountNumber, printResult.LastPrintedCheckNumber);
                 }
                 else
                 {
@@ -97,7 +97,7 @@ namespace UnitTestingExamples.Example1.HardToTest
                     }
                     return 0m;
                 default:
-                    return 0m;
+                    throw new ArgumentOutOfRangeException(nameof(accountType));
             }
         }
     }

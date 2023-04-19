@@ -4,9 +4,9 @@ namespace CheckbookPrinting
 {
     public static class CheckbookPrinter
     {
-        public static CheckbookPrintResult Print(CustomerAccount customerAccount, CheckbookType checkbookType, int numberOfChecks)
+        public static CheckbookPrintResult Print(CustomerAccount customerAccount, CheckbookType checkbookType, int numberOfChecks, int startCheckNumber)
         {
-            return new CheckbookPrintResult() { Success = true };
+            return new CheckbookPrintResult() { Success = true, LastPrintedCheckNumber = startCheckNumber + numberOfChecks };
         }
 
         public static CheckbookPrintResult PrintInvoice(CustomerAccount customerAccount, decimal amount)
