@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KTMSTest", "KTMSTest\KTMSTe
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UnitTests", "UnitTests", "{A0DA15E3-B9F2-47C4-8B48-FA2F843DBBE2}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExampleApplications", "UnitTestingExamples\ExampleApplications.csproj", "{341438C7-3779-41AD-A28B-24B3BC4708EE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KTExampleApplication", "UnitTestingExamples\KTExampleApplication.csproj", "{341438C7-3779-41AD-A28B-24B3BC4708EE}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CheckbookPrinting", "CheckbookPrinting\CheckbookPrinting.csproj", "{D7F8571A-A348-4544-A6B3-EEFE2A692505}"
 EndProject
