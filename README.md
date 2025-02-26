@@ -121,7 +121,7 @@ Contributions are welcome! Feel free to submit PRs with improvements, refactorin
 
 ## License
 
-This project is licensed under --
+This project is licensed under **Apache 2.0 License**.
 
 ---
 
