@@ -1,4 +1,4 @@
-# UTKTSession: Enhancing Code Testability in C# and .NET
+# UTKTSession: Code Testability with C# .NET
 
 ## Overview
 
